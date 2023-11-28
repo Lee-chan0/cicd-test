@@ -46,4 +46,4 @@ jobs:
         --application-name my-codedeploy-app
         --deployment-config-name CodeDeployDefault.OneAtATime
         --deployment-group-name my-codedeploy-deployment-group
-        --s3-location my-githubactionbucket,bundleType=zip,key=deploy/CI.zip
+        --s3-location my-githubactionbucket=bundleType=zip,key=deploy/CI.zip
