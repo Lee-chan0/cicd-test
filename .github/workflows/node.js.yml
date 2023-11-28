@@ -43,7 +43,7 @@ jobs:
 
     - name: deploy with AWS codeDeploy
       run: aws deploy create-deployment
-        --application-name my-codedeploy-app
-        --deployment-config-name CodeDeployDefault.OneAtATime
-        --deployment-group-name my-codedeploy-deployment-group
-        --s3-location my-githubactionbucket=bundleType=zip,key=deploy/CI.zip
+       --application-name my-codedeploy-app \
+       --deployment-config-name CodeDeployDefault.OneAtATime \
+       --deployment-group-name my-codedeploy-deployment-group \
+       --s3-location bucket=my-githubactionbucket,bundleType=zip,key=deploy/CI.zip
