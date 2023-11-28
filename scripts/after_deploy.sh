@@ -4,4 +4,4 @@ cd $REPOSITORY
 
 sudo npm ci
 
-node app.js
+npm start
