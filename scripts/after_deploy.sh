@@ -4,4 +4,4 @@ cd $REPOSITORY
 
 sudo npm ci
 
-sudo pm2 start
+npm start
