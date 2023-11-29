@@ -39,11 +39,11 @@ jobs:
         aws-region: ap-northeast-2
 
     - name: upload to S3
-      run: aws s3 cp --region ap-northeast-2 ./CI.zip s3://my-githubactionbucket/deploy/
+      run: aws s3 cp --region ap-northeast-2 ./CI.zip s3://my-gitaction-bucket/deploy/
 
     - name: deploy with AWS codeDeploy
       run: aws deploy create-deployment
        --application-name my-codedeploy-app
        --deployment-config-name CodeDeployDefault.OneAtATime
-       --deployment-group-name my-codedeploy-deployment-group
-       --s3-location bucket=my-githubactionbucket,bundleType=zip,key=deploy/CI.zip
+       --deployment-group-name my-codedeploy-group
+       --s3-location bucket=my-gitaction-bucket,bundleType=zip,key=deploy/CI.zip
